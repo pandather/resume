@@ -1,0 +1,189 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.3, 30 April 2017) written by
+% LianTze Lim (liantze@gmail.com), based on the 
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+% 
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you want to use \orcid or the
+%% academicons icons, add "academicons"
+%% to the \documentclass options. 
+%% Then compile with XeLaTeX or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,letterpaper]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages. 
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% When using the "academicons" option,
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font %% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=7.2cm,marginparsep=0.8cm,top=1cm,bottom=1cm}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage{relsize}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\RequirePackage{color,graphicx,geometry}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{burntOrange}{HTML}{BF5700}
+\definecolor{UTBlue}{HTML}{005f86}
+\definecolor{SlateGrey}{HTML}{333F48}
+
+%\colorlet{heading}{burntOrange}
+%\colorlet{accent}{burntOrange}
+%\colorlet{emphasis}{UTBlue}
+%\colorlet{body}{SlateGrey}
+
+\colorlet{heading}{black}
+\colorlet{accent}{black}
+\colorlet{emphasis}{black}
+\colorlet{body}{black}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    filecolor=black,
+    urlcolor=SlateGrey
+}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\def\cpp{
+	%C\kern-.1667em\raise.30ex\hbox{\smaller{++}}
+	C\kern-.1667em\raise.27ex\hbox{\smaller{++}}
+}
+
+\begin{document}
+\name{Mark Kuebel}
+\tagline{Software Engineer}
+
+%\photo{2.5cm}{Untitled.png}
+
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{\href{mailto:mkuebel@riseup.net}{mkuebel@riseup.net}}
+  \phone{\href{tel:+1-512-815-9939}{(512) 815-9939}}
+  %\linkedin{\href{https://www.linkedin.com/in/markjkuebel/}{linkedin.com/in/markjkuebel/}}
+  %\homepage{markjkuebel.com}
+%  \github{github.com/pandather}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+
+%% \cofeAm{alpha}{scale}{angle}{xoff}{yoff}
+\cvsection[page1sidebar]{Experience}
+\cvevent{Google Summer of Code}{Gentoo Foundation}{March 2021 -- Aug 2021}{Remote}
+\begin{itemize}
+    \item Redesigned the specification of Gentoo's Catalyst image building tool, allowing a dependency tree of builds to be made, facilitating parallel builds
+    \item Created a docker-catalyst script so that Gentoo stage builds and release media can be configured and built from any host operating system
+    \item Proposed, managed, and completed a project that I designed for an organization that I love
+\end{itemize}
+
+
+\divider
+
+\cvevent{Information Technology Manager}{Blanco AC Electrical \& Plumbing}{May 2013 -- Aug 2017}{Blanco, TX}
+\begin{itemize}
+\item Designed and deployed gigabit Cat5e and wireless network with redundant storage and an Active Directory server
+\item Allowed the company to scale their workforce technology securely, reliably, and efficiently
+\end{itemize}
+
+\divider
+
+\cvevent{Information Technology Manager}{Paisley Grey Inc.}{Nov 2013 -- Aug 2017}{Blanco, TX}
+\begin{itemize}
+\item Deployed networked redundant storage solution to allow remote access to the company's information 
+\item Implemented inventory management utilizing MySQL
+\end{itemize}
+
+\cvsection{Projects}
+
+\cvevent{acHUE}{Modular Connected Lighting Controller}{Feb 2017 -- Dec 2017}{}
+\begin{itemize}
+\item Allows portable, seamless management of network connected lighting
+\item Server core and parallel task management allows for easy scalability
+\end{itemize}
+
+\divider
+
+\cvevent{Arbotrage}{Automated Arbitrage Based Cryptocurrency Trader}{Dec 2017 -- Feb 2018}{}
+\begin{itemize}
+\item Capitalizes on the price differences between cryptocurrency exchanges
+\end{itemize}
+
+\divider
+
+\cvevent{OctreeCraft}{Simple Recursive Minecraft Implementation using Octree-based Voxels}{March 2018 -- July 2018}{}
+\begin{itemize}
+\item The recursive aspect of octrees allows for infinitely small voxels and allows rendering lower resolution geometry for distant objects
+\end{itemize}
+
+% \divider
+
+% \cvevent{BBB-Wiegand}{Wiegand Protocol Reader for the Beaglebone Black}{Sept 2019  -- June 2019}{}
+% \begin{itemize}
+% \item Reads a Wiegand signal at 3.3V over the BBB's GPIO pins
+% \item Added parity checking, warnings for swapped data lines, and decryption
+% \end{itemize}
+
+% \divider
+
+% \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
+
+% \begin{itemize}
+% \item Joined the company as employe \#20 and female employee \#1
+% \item Developed targeted advertisement in order to use user's search queries and show them related ads
+% \end{itemize}
+
+\clearpage
+
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the 
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
+
+\end{document}
